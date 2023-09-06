@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  background-color: lightgray;
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  max-width: 750px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.card {
+  background-color: rgb(105, 46, 46);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
