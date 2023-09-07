@@ -15,20 +15,32 @@
   <body>
     <section class="container">
       <div class="card">
-        <h1 data-testid="slackUserName">Nuel Elekwachi</h1>
+        <div class="flex">
+          <p>Slack username:</p>
+          <h1 data-testid="slackUserName">Nuel Elekwachi</h1>
+        </div>
         <img
           src="./asset/2.jpg"
           alt="Nuel Elekwachi"
           data-testid="slackDisplayImage"
         />
-        <p data-testid="currentDayOfTheWeek">Wednesday</p>
-        <p data-testid="currentUTCTime">9:00pm</p>
-        <p data-testid="myTrack">Frontend</p>
+        <div class="flex">
+          <span>Track:</span>
+          <p data-testid="myTrack">Frontend</p>
+        </div>
+        <div class="flex">
+          <span>Current Day:</span>
+          <p data-testid="currentDayOfTheWeek">Wednesday</p>
+        </div>
+        <div class="flex">
+          <span>Current UTC time(milliseconds)</span>
+          <p data-testid="currentUTCTime">1694102219854</p>
+        </div>
         <a
           href="https://github.com/ijklmopffs/stage1"
           target="_blank"
           data-testid="githubURL"
-          >Source code</a
+          >Github Repository</a
         >
       </div>
     </section>

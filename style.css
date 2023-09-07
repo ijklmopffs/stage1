@@ -35,7 +35,12 @@ p {
   margin: 1rem;
 }
 a {
-  color: white;
+  color: rgb(103, 103, 160);
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
