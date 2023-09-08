@@ -15,26 +15,16 @@
   <body>
     <section class="container">
       <div class="card">
-        <div class="flex" data-testid="slackUserName">
-          <p>Slack username:</p>
-          <h1>Nuel Elekwachi</h1>
-        </div>
+        <h1 data-testid="slackUserName">Nuel Elekwachi</h1>
         <img
           src="./asset/2.jpg"
           alt="Nuel Elekwachi"
           data-testid="slackDisplayImage"
         />
-        <div class="flex" data-testid="myTrack">
-          <span>Track:</span>
-          <p>Frontend</p>
-        </div>
-        <div class="flex" data-testid="currentDayOfTheWeek">
-          <span>Current Day:</span>
-          <p>Thursday</p>
-        </div>
-        <div class="flex" data-testid="currentUTCTime">
-          <span>Current UTC time(milliseconds)</span>
-          <p>1694102219854</p>
+        <p data-testid="myTrack">Track: Frontend</p>
+        <div>
+          <p data-testid="currentDayOfTheWeek"></p>
+          <p data-testid="currentUTCTime"></p>
         </div>
         <a
           href="https://github.com/ijklmopffs/stage1"
@@ -44,5 +34,46 @@
         >
       </div>
     </section>
+
+    <script>
+      function setDayOfWeek() {
+        const dayOfWeekElement = document.querySelector(
+          '[data-testid="currentDayOfTheWeek"]'
+        );
+        const currentDate = new Date();
+        const options = { weekday: "long" };
+        const formattedDayOfWeek = currentDate.toLocaleDateString(
+          undefined,
+          options
+        );
+        dayOfWeekElement.textContent = formattedDayOfWeek;
+      }
+      setDayOfWeek();
+
+      function updateClock() {
+        const timeElement = document.querySelector(
+          '[data-testid="currentUTCTime"]'
+        );
+        const updateClockDisplay = () => {
+          const currentDate = new Date();
+          const options = {
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            timeZoneName: "short",
+          };
+          const formattedTime = currentDate.toLocaleTimeString(
+            undefined,
+            options
+          );
+          timeElement.textContent = formattedTime;
+        };
+
+        updateClockDisplay();
+
+        setInterval(updateClockDisplay, 1000);
+      }
+      updateClock();
+    </script>
   </body>
 </html>
